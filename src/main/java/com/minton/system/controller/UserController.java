@@ -22,10 +22,11 @@ public class UserController {
 
     @GetMapping("/test")
     @OperLog(operationDesc = "测试查询admin")
-    public RetInfo testSelectUser() throws IllegalStateException {
+    public RetInfo testSelectUser() {
+
         String s = userService.testSelect();
-        throw new IllegalStateException();
-//        return RetResult.retSuccess(s);
+
+        return RetResult.retSuccess(s);
     }
 
 }
