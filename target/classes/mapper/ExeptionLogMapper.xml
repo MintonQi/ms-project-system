@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.minton.logging.dao.ExceptionLogMapper">
+    <insert id="com.minton.logging.dao.ExceptionLogMapper.insert" parameterType="com.minton.logging.entity.ExceptionLog" keyProperty="exception_log_id">
+        INSERT INTO LOG_exception_LOG(exception_name, exception_message, exception_time)
+        VALUES(#{exception_name}, #{exception_message}, #{exception_time});
+    </insert>
+
+</mapper>
