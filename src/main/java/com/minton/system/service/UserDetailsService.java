@@ -1,8 +1,10 @@
 package com.minton.system.service;
 
+import com.minton.system.model.pojo.User;
+
 public interface UserDetailsService {
 
-    User
+    public User getUserDetailsByUsername(String username);
 
 
 }

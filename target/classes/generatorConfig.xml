@@ -6,7 +6,7 @@
     <!-- 配置文件，放在resource目录下即可 -->
     <!--数据库驱动个人配置-->
     <classPathEntry
-            location="C:\Users\13693\.m2\repository\com\mysql\mysql-connector-j\8.0.32\mysql-connector-j-8.0.32.jar"/>
+            location="C:\Users\13693\.m2\repository\com\mysql\mysql-connector-j\8.0.32"/>
     <context id="MysqlTables" targetRuntime="MyBatis3">
         <property name="autoDelimitKeywords" value="true"/>
         <!--可以使用``包括字段名，避免字段名与sql保留字冲突报错-->
@@ -61,7 +61,7 @@
                enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">
         </table>
-        <table tableName="sys_users_roles" domainObjectName="UsersRoles"
+        <table tableName="sys_users_role" domainObjectName="UsersRoles"
                enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">
