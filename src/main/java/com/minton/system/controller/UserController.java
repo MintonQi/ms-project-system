@@ -6,14 +6,13 @@ import com.minton.common.ret.RetResult;
 import com.minton.logging.OperLog;
 import com.minton.system.model.pojo.User;
 import com.minton.system.service.UserDetailsServiceImp;
-import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@Api(value = "用户相关操作")
+
 @RestController
 @RequestMapping("/test/users")
 public class UserController {

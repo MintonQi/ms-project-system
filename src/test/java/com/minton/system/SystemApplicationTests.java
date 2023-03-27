@@ -9,6 +9,7 @@ import com.minton.system.service.UserDetailsServiceImp;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.RedisTemplate;
 
 import static com.minton.common.ret.RetResult.retInfo;
 
@@ -16,17 +17,20 @@ import static com.minton.common.ret.RetResult.retInfo;
 class SystemApplicationTests {
 
     @Autowired
-    UserMapper userMapper;
+    private UserMapper userMapper;
 
     @Autowired
-    OperationLogMapper operationLogMapper;
+    private OperationLogMapper operationLogMapper;
 
     @Autowired
-    ExceptionLogMapper exceptionLogMapper;
+    private ExceptionLogMapper exceptionLogMapper;
     @Autowired
-    UserDetailsServiceImp userDetailsServiceImp;
+    private UserDetailsServiceImp userDetailsServiceImp;
     @Autowired
-    UserController userController;
+    private UserController userController;
+
+    @Autowired
+    private RedisTemplate<Object, Object> redisTemplate;
 
     @Test
     void contextLoads() {
@@ -44,6 +48,13 @@ class SystemApplicationTests {
     }
 
 
+    @Test
+    void testRedis(){
+        redisTemplate.opsForValue().set("test_key2", "102");
+        System.out.println(redisTemplate.opsForValue().get("test_key"));
+        System.out.println(redisTemplate.opsForValue().get("test_key1"));
+        System.out.println(redisTemplate.opsForValue().get("test_key2"));
+    }
 
 
 
