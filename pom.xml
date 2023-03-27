@@ -50,39 +50,45 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.mybatis.generator/mybatis-generator-maven-plugin -->
+        <!-- https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter -->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>3.0.1</version>
+        </dependency>
 
 
 
-        <!-- https://mvnrepository.com/artifact/com.googlecode.log4jdbc/log4jdbc -->
-<!--        <dependency>-->
-<!--            <groupId>com.googlecode.log4jdbc</groupId>-->
-<!--            <artifactId>log4jdbc</artifactId>-->
-<!--            <version>1.2</version>-->
-<!--        </dependency>-->
-<!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.bgee.log4jdbc-log4j2/log4jdbc-log4j2-jdbc4.1 &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>org.bgee.log4jdbc-log4j2</groupId>-->
-<!--            <artifactId>log4jdbc-log4j2-jdbc4.1</artifactId>-->
-<!--            <version>1.16</version>-->
-<!--        </dependency>-->
+<!--         https://mvnrepository.com/artifact/com.googlecode.log4jdbc/log4jdbc -->
+        <dependency>
+            <groupId>com.googlecode.log4jdbc</groupId>
+            <artifactId>log4jdbc</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.bgee.log4jdbc-log4j2/log4jdbc-log4j2-jdbc4.1 -->
+        <dependency>
+            <groupId>org.bgee.log4jdbc-log4j2</groupId>
+            <artifactId>log4jdbc-log4j2-jdbc4.1</artifactId>
+            <version>1.16</version>
+        </dependency>
 
 
 
-<!--        <dependency>-->
-<!--            <groupId>com.minton</groupId>-->
-<!--            <artifactId>logging</artifactId>-->
-<!--            <version>0.0.1-SNAPSHOT</version>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>com.minton</groupId>-->
-<!--            <artifactId>common</artifactId>-->
-<!--            <version>0.0.1-SNAPSHOT</version>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>com.minton</groupId>-->
-<!--            <artifactId>tools</artifactId>-->
-<!--            <version>0.0.1-SNAPSHOT</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.minton</groupId>
+            <artifactId>logging</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.minton</groupId>
+            <artifactId>common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.minton</groupId>
+            <artifactId>tools</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
 
 
     </dependencies>

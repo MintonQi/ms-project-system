@@ -15,7 +15,7 @@ public class UserDetailsServiceImp implements UserDetailsService{
 
     @Override
     public User getUserDetailsByUsername(String username) {
-        User user = userMapper.getUserByUsername(username);
+        User user = userMapper.selectByUsername(username);
         return user;
     }
 

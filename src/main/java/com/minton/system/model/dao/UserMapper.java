@@ -5,7 +5,7 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface UserMapper {
-    User getUserByUsername(String username);
+    User selectByUsername(String username);
 
     int deleteByPrimaryKey(Long userId);
 
