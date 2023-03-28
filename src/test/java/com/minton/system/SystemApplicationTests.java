@@ -30,7 +30,7 @@ class SystemApplicationTests {
     private UserController userController;
 
     @Autowired
-    private RedisTemplate<Object, Object> redisTemplate;
+    private RedisTemplate<String, Object> redisTemplate;
 
     @Test
     void contextLoads() {
@@ -50,10 +50,9 @@ class SystemApplicationTests {
 
     @Test
     void testRedis(){
-        redisTemplate.opsForValue().set("test_key2", "102");
-        System.out.println(redisTemplate.opsForValue().get("test_key"));
-        System.out.println(redisTemplate.opsForValue().get("test_key1"));
-        System.out.println(redisTemplate.opsForValue().get("test_key2"));
+        redisTemplate.opsForValue().set("t3", "000");
+
+        System.out.println(redisTemplate.opsForValue().get("t3"));
     }
 
 
