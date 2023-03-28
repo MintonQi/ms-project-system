@@ -2,14 +2,14 @@ package com.minton.system;
 
 import com.minton.logging.dao.ExceptionLogMapper;
 import com.minton.logging.dao.OperationLogMapper;
-import com.minton.logging.entity.ExceptionLog;
 import com.minton.system.controller.UserController;
 import com.minton.system.model.dao.UserMapper;
-import com.minton.system.service.UserDetailsServiceImp;
+import com.minton.system.service.UserDetailsServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import static com.minton.common.ret.RetResult.retInfo;
 
@@ -25,7 +25,7 @@ class SystemApplicationTests {
     @Autowired
     private ExceptionLogMapper exceptionLogMapper;
     @Autowired
-    private UserDetailsServiceImp userDetailsServiceImp;
+    private UserDetailsServiceImpl userDetailsServiceImpl;
     @Autowired
     private UserController userController;
 
@@ -38,7 +38,7 @@ class SystemApplicationTests {
 
     @Test
     void testSelect(){
-        System.out.println(userDetailsServiceImp.getUserDetailsByUsername("admin").toString());
+        System.out.println(userDetailsServiceImpl.loadUserByUsername("admin").toString());
     }
 
     @Test
@@ -53,6 +53,12 @@ class SystemApplicationTests {
         redisTemplate.opsForValue().set("t3", "000");
 
         System.out.println(redisTemplate.opsForValue().get("t3"));
+    }
+
+    @Test
+    void testUserDetailsServiceImpl(){
+        UserDetails userDetails = userDetailsServiceImpl.loadUserByUsername("test");
+        System.out.println(userDetails.toString());
     }
 
 

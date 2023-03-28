@@ -240,4 +240,13 @@
     where user_id = #{userId,jdbcType=BIGINT}
   </update>
 
+  <select id="selectRoleNamesByUsername" resultType="String">
+    select `name`
+    from sys_user u
+           join sys_users_roles ur on u.user_id = ur.user_id
+           join sys_role r on r.role_id = ur.role_id
+    where username = #{username}
+  </select>
+
+
 </mapper>

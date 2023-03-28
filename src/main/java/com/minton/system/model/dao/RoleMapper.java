@@ -1,7 +1,9 @@
 package com.minton.system.model.dao;
 
 import com.minton.system.model.pojo.Role;
+import org.apache.ibatis.annotations.Mapper;
 
+@Mapper
 public interface RoleMapper {
     int deleteByPrimaryKey(Long roleId);
 
