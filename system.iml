@@ -140,6 +140,7 @@
     <orderEntry type="library" name="Maven: org.webjars:swagger-ui:4.18.1" level="project" />
     <orderEntry type="library" name="Maven: org.webjars:webjars-locator-core:0.52" level="project" />
     <orderEntry type="library" name="Maven: io.github.classgraph:classgraph:4.8.149" level="project" />
+    <orderEntry type="library" name="Maven: com.auth0:java-jwt:4.3.0" level="project" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.26" level="project" />
     <orderEntry type="library" name="Maven: cn.hutool:hutool-all:5.8.15" level="project" />
     <orderEntry type="module" module-name="tools" />

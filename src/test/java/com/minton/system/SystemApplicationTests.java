@@ -11,6 +11,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.util.Set;
+
 import static com.minton.common.ret.RetResult.retInfo;
 
 @SpringBootTest
@@ -50,8 +52,11 @@ class SystemApplicationTests {
 
     @Test
     void testRedis(){
-        redisTemplate.opsForValue().set("t3", "000");
-
+//        redisTemplate.opsForValue().set("t3", "000");
+        Set<String> keys = redisTemplate.keys("*");
+        System.out.println(keys);
+        System.out.println(redisTemplate.delete(keys));
+        System.out.println(redisTemplate.keys("*"));
         System.out.println(redisTemplate.opsForValue().get("t3"));
     }
 
@@ -60,6 +65,8 @@ class SystemApplicationTests {
         UserDetails userDetails = userDetailsServiceImpl.loadUserByUsername("test");
         System.out.println(userDetails.toString());
     }
+
+
 
 
 
